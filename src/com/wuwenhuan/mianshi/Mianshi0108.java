@@ -1,13 +1,13 @@
-package com.wuwenhuan.leetcode;
+package com.wuwenhuan.mianshi;
 
 import java.util.Arrays;
 
-public class MyClass {
+/**
+ * 编写一种算法，若M × N矩阵中某个元素为0，则将其所在的行与列清零。
+ */
+public class Mianshi0108 {
 
 
-    /**
-     * 编写一种算法，若M × N矩阵中某个元素为0，则将其所在的行与列清零。
-     */
     public void setZeroes(int[][] matrix) {
         boolean[] row = new boolean[matrix.length];
         boolean[] col = new boolean[matrix[0].length];
@@ -40,9 +40,8 @@ public class MyClass {
 
     public static void main(String[] args) {
         int[][] matrix = {{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
-        MyClass myClass = new MyClass();
-        myClass.setZeroes(matrix);
+        Mianshi0108 mianshi0108 = new Mianshi0108();
+        mianshi0108.setZeroes(matrix);
         System.out.println(Arrays.deepToString(matrix));
     }
-
 }
