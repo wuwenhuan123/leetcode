@@ -1,5 +1,8 @@
 package com.wuwenhuan.leetcode;
 
+/**
+ * 最长回文子串
+ */
 public class Solution5 {
 	public String longestPalindrome(String s) {
 		if (s == null || s.length() == 0) {
@@ -28,5 +31,11 @@ public class Solution5 {
 			right++;
 		}
 		return s.substring(left + 1, right);
+	}
+
+	public static void main(String[] args) {
+		String s="babad";
+		Solution5 solution5 = new Solution5();
+		System.out.println(solution5.longestPalindrome(s));
 	}
 }

@@ -105,7 +105,9 @@ public class Solution14 {
         }
         int low = 0, high = minLength;
         while (low < high) {
+            //一般二分法写作（a+b）/2  这里写作 b+（a-b+1）/2避免a+b大于Integer.MAX_VALUE造成程序错误，+1是为了向上取整
             int mid = (high - low + 1) / 2 + low;
+            //如果存在最长公共串，将low设为之前的mid，意思是查询上半段
             if (isCommonPrefix(strs, mid)) {
                 low = mid;
             } else {
