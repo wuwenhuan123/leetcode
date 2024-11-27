@@ -33,6 +33,12 @@ public class Solution5 {
         return s.substring(left + 1, right);
     }
 
+
+    /**
+     *
+     * @param s
+     * @return
+     */
     public String longestPalindrome2(String s) {
         if (s.length()<=1){
             return s;
