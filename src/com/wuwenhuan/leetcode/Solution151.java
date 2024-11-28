@@ -31,9 +31,15 @@ public class Solution151 {
             for (int j = i; j < length; j++) {
                 char c = s.charAt(j);
                 if (c == ' ') {
-                    wordList.add(0, s.substring(i, j));
-                    i = j + 1;
-
+                    if (i != j) {
+                        wordList.add(0, s.substring(i, j));
+                    }
+                    i = j;
+                    break;
+                } else if (j == length - 1) {
+                    wordList.add(0, s.substring(i, j + 1));
+                    i = j;
+                    break;
                 }
             }
         }
@@ -42,7 +48,7 @@ public class Solution151 {
 
     public static void main(String[] args) {
         Solution151 solution151 = new Solution151();
-        String s = "the sky is blue";
+        String s = "a good   example";
         System.out.println(solution151.reverseWords2(s));
 
     }
